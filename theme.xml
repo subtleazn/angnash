@@ -13,18 +13,21 @@
 
 <!-- Facebook OpenGraph -->
 <meta content='article' property='og:type'/>
-<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta content='Nash Ang' property='og:site_name'/> <!-- Changed from data:blog.title -->
 <meta expr:content='data:blog.pageName' property='og:title'/>
 <meta expr:content='data:blog.url' property='og:url'/>
 <b:if cond='data:blog.metaDescription'>
-<meta expr:content='data:blog.metaDescription' name='description'/>
+<meta expr:content='data:blog.metaDescription' property='og:description'/>
 <b:else/>
-<meta expr:content='data:post.snippet' name='description'/>
+<meta expr:content='data:post.snippet' property='og:description'/>
 </b:if>
 <b:if cond='data:blog.postImageUrl'>
 <meta expr:content='data:blog.postImageUrl' property='og:image'/>
 <meta content='1200' property='og:image:width'/>
 <meta content='630' property='og:image:height'/>
+<b:else/>
+<!-- Fallback image for Open Graph if postImageUrl is not available -->
+<meta content='https://example.com/default-og-image.jpg' property='og:image'/>
 </b:if>
 <!--
 <meta content='226602698029246' property='fb:app_id'/>
@@ -35,6 +38,18 @@
 <meta content='@nash_ang' name='twitter:site'/>
 <meta content='@nash_ang' name='twitter:creator'/>
 <meta expr:content='data:blog.canonicalUrl.https' name='twitter:url'/>
+<meta expr:content='data:blog.pageName' name='twitter:title'/>
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+<b:else/>
+<meta expr:content='data:post.snippet' name='twitter:description'/>
+</b:if>
+<b:if cond='data:blog.postImageUrl'>
+<meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
+<b:else/>
+<!-- Fallback image for Twitter Card if postImageUrl is not available -->
+<meta content='https://example.com/default-twitter-image.jpg' name='twitter:image'/>
+</b:if>
 
 
 
@@ -48,24 +63,28 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
 
 
 
-   <title>
-      <b:if cond='data:blog.pageType == &quot;archive&quot;'>
-        <data:blog.pageName/> | Nash Ang
-        <b:else/>
-        <b:if cond='data:blog.searchLabel'>
-          <data:blog.pageName/> | Nash Ang
-          <b:else/>
-          <b:if cond='data:blog.pageType == &quot;index&quot;'>
+    <title>
+        <b:if cond='data:blog.pageType == &quot;index&quot;'>
             <data:blog.pageTitle/>
+        <b:else/>
+            <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+                <data:blog.pageName/> | <data:blog.title/>
             <b:else/>
-            <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
-              <data:blog.pageName/>
-              <b:else/>
-              Page Not Found | <data:blog.title/> 
+                <b:if cond='data:blog.pageType == &quot;item&quot;'>
+                    <data:blog.pageName/> | <data:blog.title/>
+                <b:else/>
+                    <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+                        <data:blog.pageName/> | <data:blog.title/>
+                    <b:else/>
+                        <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+                            Page Not Found | <data:blog.title/>
+                        <b:else/>
+                            <data:blog.pageName/> | <data:blog.title/>
+                        </b:if>
+                    </b:if>
+                </b:if>
             </b:if>
-          </b:if>
-        </b:if>
-      </b:if>
+        </b:else/>
     </title>
     <b:if cond='data:blog.metaDescription == &quot;&quot;'>
 
@@ -1544,6 +1563,23 @@ jQuery(document).ready(function($) {
   </style>
   </state>
 
+
+<script type='application/ld+json'>
+<![CDATA[
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "<data:blog.title/>",
+  "url": "<data:blog.homepageUrl/>",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "<data:blog.homepageUrl/>search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+]]>
+</script>
+
 </head>
 <body id='layout'>
 
@@ -2238,6 +2274,16 @@ jQuery(document).ready(function($) {
     </b:if>
     <meta expr:content='data:blog.blogId' itemprop='blogId'/>
     <meta expr:content='data:post.id' itemprop='postId'/>
+    <meta expr:content='data:post.title' itemprop='headline'/>
+    <meta expr:content='data:blog.metaDescription ? data:blog.metaDescription : data:post.snippet' itemprop='description'/>
+    <meta expr:content='data:post.timestampISO8601' itemprop='datePublished'/>
+    <meta expr:content='data:post.timestampISO8601' itemprop='dateModified'/>
+    <div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
+        <meta expr:content='data:blog.title' itemprop='name'/>
+        <div itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+            <meta content='https://example.com/logo.png' itemprop='url'/>
+        </div>
+    </div>
 
     <a expr:name='data:post.id'/>
     <b:if cond='data:blog.pageType == &quot;item&quot;'>

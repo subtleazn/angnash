@@ -1,41 +1,44 @@
-# Knight - A Blogger Theme for Filmmakers
+# Ang Nash Blogger Theme
 
-This repository contains the Blogger theme "Knight," originally a Bootstrap theme by BootstrapMade, adapted for use as a filmmaker's portfolio. This version of the theme is used for the website [nash.pinoyseoul.com](https://nash.pinoyseoul.com).
+A modern, responsive Blogger theme designed for personal blogs and portfolios, focusing on clean aesthetics and optimal performance.
 
-## Overview
+## Author
 
-The "Knight" theme is a clean, modern, and responsive one-page theme. It has been customized to suit the needs of a filmmaker, providing a visually appealing and professional online portfolio.
-
-## Live Demo
-
-You can see a live demo of this theme at [nash.pinoyseoul.com](https://nash.pinoyseoul.com).
+Nash Ang (PinoySeoul Media Enterprise)
 
 ## Features
 
-*   **Responsive Design:** The theme is fully responsive and looks great on all devices.
-*   **One-Page Layout:** A single-page layout for a smooth and seamless user experience.
-*   **Portfolio Section:** A dedicated section to showcase filmography and other works.
-*   **Contact Form:** A functional contact form for inquiries.
-*   **Easy to Customize:** The theme is built on Bootstrap, making it easy to customize and extend.
+*   **Responsive Design:** Adapts seamlessly to various screen sizes, from desktops to mobile devices.
+*   **Enhanced SEO:** Optimized meta tags and structured data (Schema.org) for better search engine visibility.
+*   **Improved Social Sharing:** Comprehensive Open Graph and Twitter Card support for rich previews when sharing content.
+*   **Clean and Modern Layout:** Focus on readability and user experience.
+*   **Customizable:** Easily adaptable through Blogger's theme editor.
 
-## Usage
+## Installation
 
-To use this theme for your own Blogger website, you can download the `theme.xml` file and upload it to your Blogger dashboard.
+1.  **Backup your existing theme:** Always download a backup of your current Blogger theme before making any changes.
+2.  **Navigate to Blogger Theme:** In your Blogger dashboard, go to "Theme" -> "Edit HTML".
+3.  **Upload `theme.xml`:** Replace the entire content of your current theme with the content of the `theme.xml` file from this repository.
+4.  **Save Theme:** Click the "Save theme" button.
 
-1.  Go to your Blogger dashboard.
-2.  Navigate to the "Theme" section.
-3.  Click on the "Backup/Restore" button.
-4.  Choose the `theme.xml` file and upload it.
+## Customization
 
-## Open Source
+Most customizations can be done directly from the Blogger Theme editor under "Layout" or "Customize".
 
-This theme is open source and you are free to use, modify, and distribute it as you see fit.
+*   **Logo:** Update logo images by navigating to the "Layout" section in Blogger.
+*   **Social Media Links:** Adjust social media links in the `theme.xml` file or through Blogger's widgets if available.
+*   **Default Images for Social Sharing:** Remember to replace the placeholder image URLs (`https://example.com/default-og-image.jpg` and `https://example.com/default-twitter-image.jpg`) in `theme.xml` with your own default images for Open Graph and Twitter Cards.
+*   **Publisher Logo URL for Schema:** Update `https://example.com/logo.png` in `theme.xml` with the actual URL of your organization's logo for improved Schema.org markup.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions, bug reports, or want to contribute code, please follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes.
+4.  Submit a pull request with a clear description of your changes.
 
 ## License
 
-This theme is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
-## Acknowledgments
-
-*   **Original Theme:** Knight by [BootstrapMade](https://bootstrapmade.com/knight-free-bootstrap-theme/)
-*   **Framework:** [Bootstrap](https://getbootstrap.com/)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
