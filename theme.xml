@@ -84,7 +84,7 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
           <data:blog.pageName/> | Nash Ang
           <b:else/>
           <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            Nash Ang | Filmmaker | Social Entrepreneur
+            Nash Ang | Filmmaker
             <b:else/>
             <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
               <data:blog.pageName/> | Nash Ang
