@@ -13,7 +13,7 @@
 
 <!-- Facebook OpenGraph -->
 <meta content='article' property='og:type'/>
-<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta content='Nash Ang | PinoySeoul Media Enterprise' property='og:site_name'/>
 <meta expr:content='data:blog.pageName' property='og:title'/>
 <meta expr:content='data:blog.url' property='og:url'/>
 <b:if cond='data:blog.metaDescription'>
@@ -36,6 +36,34 @@
 <meta content='@nash_ang' name='twitter:creator'/>
 <meta expr:content='data:blog.canonicalUrl.https' name='twitter:url'/>
 
+<!-- Added Twitter Card Meta tags for better sharing -->
+<meta expr:content='data:blog.pageName' name='twitter:title'/>
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.metaDescription' name='twitter:description'/>
+<b:else/>
+<meta expr:content='data:post.snippet' name='twitter:description'/>
+</b:if>
+<b:if cond='data:blog.postImageUrl'>
+<meta expr:content='data:blog.postImageUrl' name='twitter:image'/>
+<b:else/>
+<!-- Fallback image if no post image, ensure this URL is valid -->
+<meta content='https://nash.pinoyseoul.com/img/default-social-image.png' name='twitter:image'/>
+</b:if>
+
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "Nash Ang | PinoySeoul Media Enterprise",
+  "url": "https://nash.pinoyseoul.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://nash.pinoyseoul.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
 
 
 
@@ -56,12 +84,12 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
           <data:blog.pageName/> | Nash Ang
           <b:else/>
           <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            <data:blog.pageTitle/>
+            Nash Ang | Filmmaker | Social Entrepreneur
             <b:else/>
             <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
-              <data:blog.pageName/>
+              <data:blog.pageName/> | Nash Ang
               <b:else/>
-              Page Not Found | <data:blog.title/> 
+              Page Not Found | Nash Ang
             </b:if>
           </b:if>
         </b:if>
