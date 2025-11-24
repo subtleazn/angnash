@@ -76,25 +76,11 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
 
 
 
-   <title>
-      <b:if cond='data:blog.pageType == &quot;archive&quot;'>
-        <data:blog.pageName/> | Nash Ang
-        <b:else/>
-        <b:if cond='data:blog.searchLabel'>
-          <data:blog.pageName/> | Nash Ang
-          <b:else/>
-          <b:if cond='data:blog.pageType == &quot;index&quot;'>
-            Nash Ang | Filmmaker
-            <b:else/>
-            <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
-              <data:blog.pageName/> | Nash Ang
-              <b:else/>
-              Page Not Found | Nash Ang
-            </b:if>
-          </b:if>
-        </b:if>
-      </b:if>
-    </title>
+    <b:if cond='data:view.isHomepage'>
+      <title><data:blog.title.escaped/></title>
+    <b:else/>
+      <title><data:view.title.escaped/> - <data:blog.title.escaped/></title>
+    </b:if>
     <b:if cond='data:blog.metaDescription == &quot;&quot;'>
 
       <b:else/>
