@@ -52,14 +52,14 @@
 
 <script type='application/ld+json'>
 {
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "name": "Nash Ang | PinoySeoul Media Enterprise",
-  "url": "https://nash.pinoyseoul.com",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://nash.pinoyseoul.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string"
+  &quot;@context&quot;: &quot;http://schema.org&quot;,
+  &quot;@type&quot;: &quot;WebSite&quot;,
+  &quot;name&quot;: &quot;Nash Ang | PinoySeoul Media Enterprise&quot;,
+  &quot;url&quot;: &quot;https://nash.pinoyseoul.com&quot;,
+  &quot;potentialAction&quot;: {
+    &quot;@type&quot;: &quot;SearchAction&quot;,
+    &quot;target&quot;: &quot;https://nash.pinoyseoul.com/search?q={search_term_string}&quot;,
+    &quot;query-input&quot;: &quot;required name=search_term_string&quot;
   }
 }
 </script>
@@ -76,11 +76,25 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
 
 
 
-    <b:if cond='data:view.isHomepage'>
-      <title><data:blog.title.escaped/></title>
-    <b:else/>
-      <title><data:view.title.escaped/> - <data:blog.title.escaped/></title>
-    </b:if>
+   <title>
+      <b:if cond='data:blog.pageType == &quot;archive&quot;'>
+        <data:blog.pageName/> | Nash Ang
+        <b:else/>
+        <b:if cond='data:blog.searchLabel'>
+          <data:blog.pageName/> | Nash Ang
+          <b:else/>
+          <b:if cond='data:blog.pageType == &quot;index&quot;'>
+            Nash Ang | Filmmaker
+            <b:else/>
+            <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+              <data:blog.pageName/> | Nash Ang
+              <b:else/>
+              Page Not Found | Nash Ang
+            </b:if>
+          </b:if>
+        </b:if>
+      </b:if>
+    </title>
     <b:if cond='data:blog.metaDescription == &quot;&quot;'>
 
       <b:else/>
@@ -1423,7 +1437,6 @@ border: 2px solid #fff;
 <state>
 <!-- = / jQuery /= -->
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'/>
-<script src='http://i-biyan.com/js/html5.js'/>
 
 
 <!-- = / JS Trigger / = -->
@@ -1620,7 +1633,7 @@ jQuery(document).ready(function($) {
 
             <div class='featured-box'>
                <div class='featured-box-col2 wow fadeInRight delay-04s'>
-                  <p><strong>Nash Ang</strong> is an award-winning filmmaker, cultural bridge-builder, and ecosystem architect dedicated to shaping meaningful connections between Korea and the Philippines through media and innovation. He holds a Master of Fine Arts degree from the prestigious Korea National University of Arts. Guided by a passion for people and purpose, Nash creates inspiring, human-centered projects that unite storytelling, technology, and design&#8212;powered by data-driven creativity and intelligent automation.</p>
+                  <p><strong>Nash Ang</strong> is an award-winning filmmaker, cultural bridge-builder, and ecosystem architect dedicated to shaping meaningful connections between Korea and the Philippines through media and innovation. He holds a Master of Fine Arts degree from the Korea National University of Arts. Guided by a passion for people and purpose, Nash creates inspiring, human-centered projects that unite storytelling, technology, and design, powered by data-driven creativity and intelligent automation.</p>
 
                </div>
             </div>
@@ -1628,7 +1641,7 @@ jQuery(document).ready(function($) {
            
             <div class='featured-box'>
                <div class='featured-box-col2 wow fadeInRight delay-04s'>
-                  <p>As a filmmaker, he gained international recognition early in his career, winning the <strong>Grand Prize</strong> at the <em>ASEAN-Korea Multimedia Competition 2010</em> in South Korea for his debut film. His bold vision later earned him the <strong>Best Director Award</strong> at the <em>13th Pyongyang International Film Festival</em> in North Korea&#8212;an extraordinary achievement highlighting the power of art to transcend borders.</p>
+                  <p>As a filmmaker, he gained international recognition early in his career, winning the <strong>Grand Prize</strong> at the <em>ASEAN-Korea Multimedia Competition 2010</em> in South Korea for his debut film. His bold vision later earned him the <strong>Best Director Award</strong> at the <em>13th Pyongyang International Film Festival</em> in North Korea, an extraordinary achievement highlighting the power of art to transcend borders.</p>
                </div>
             </div>           
          
@@ -1692,7 +1705,7 @@ jQuery(document).ready(function($) {
 <div class='container fadeInUp delay-04s'>
     	<h2>Filmography</h2>
   
-  <h6><strong>Nash Ang</strong> is a visionary film director, cinematographer, and performer who continues to bridge cultures through the art of cinema. As an actor, he has appeared in several acclaimed Korean dramas and films, including <em>Cheoyong</em>, <em>Mama Fairy and the Woodcutter</em>, and <em>The Running Mates: Human Rights</em>. In <em>Arthdal Chronicles</em>, Nash made a remarkable mark in Korean entertainment history by introducing native Filipino languages into the dialogue of main actors&#8212;an inspiring step toward cultural inclusion and authentic representation of Filipinos on the global screen.</h6>
+  <h6><strong>Nash Ang</strong> is a visionary film director, cinematographer, and performer who continues to bridge cultures through the art of cinema. As an actor, he has appeared in several acclaimed Korean dramas and films, including <em>Cheoyong</em>, <em>Mama Fairy and the Woodcutter</em>, and <em>The Running Mates: Human Rights</em>. In <em>Arthdal Chronicles</em>, Nash made a remarkable mark in Korean entertainment history by introducing native Filipino languages into the dialogue of main actors, an inspiring step toward cultural inclusion and authentic representation of Filipinos on the global screen.</h6>
   
       <div class='portfolioFilter'>  
         <ul class='Portfolio-nav wow fadeIn delay-02s'>
@@ -2803,7 +2816,7 @@ document.write(bp_thumbnail_resize(&quot;<data:post.thumbnailUrl/>&quot;,&quot;<
                <span>Explore my stories and insights on <a href='https://medium.com/@subtleazn' target='_blank'>Medium</a>, where I share reflections on creativity, culture, and collaboration.</span>
             </div>
             <div class='contact-info-box email clearfix'>
-               <span>If you&#8217;d like to discuss work, partnerships, or media-related opportunities, you can reach me directly at <a href='mailto:nash@pinoyseoul.com'>nash@pinoyseoul.com</a>. For everything else&#8212;conversations, inspiration, or simply to connect&#8212;feel free to follow or message me on <a href='https://www.linkedin.com/angnash' target='_blank'>LinkedIn</a>, <a href='https://www.instagram.com/aniphreak' target='_blank'>Instagram</a>, or <a href='https://www.facebook.com/aniphreak' target='_blank'>Facebook</a>. Let&#8217;s build stories that bridge worlds.</span>
+               <span>If you&#8217;d like to discuss work, partnerships, or media-related opportunities, you can reach me directly at <a href='mailto:nash@pinoyseoul.com'>nash@pinoyseoul.com</a>. For everything else, conversations, inspiration, or simply to connect, feel free to follow or message me on <a href='https://www.linkedin.com/angnash' target='_blank'>LinkedIn</a>, <a href='https://www.instagram.com/aniphreak' target='_blank'>Instagram</a>, or <a href='https://www.facebook.com/aniphreak' target='_blank'>Facebook</a>. Let&#8217;s build stories that bridge worlds.</span>
             </div>
             <div class='contact-info-box hours clearfix'>
 
