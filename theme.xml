@@ -1608,7 +1608,7 @@ jQuery(document).ready(function($) {
 <!--        <li class='small-logo'><a expr:href='data:blog.homepageUrl'><img alt='' src='http://bloghaul.com/freedom/img/small-logo.png'/></a></li>-->
          <li><a href='/films'>Filmography</a></li>
         <li><a href='/p/actor.html'>Acting Reel</a></li>
-        <li><a href='/contact'>Contact</a></li>
+        <li><a href='https://nash.is-a.dev/link-in-bio'>Contact</a></li>
       </ul>
       <a class='res-nav_click' href='#'><i class='fa-bars'/></a>
    </div>
