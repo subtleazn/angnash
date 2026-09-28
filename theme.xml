@@ -326,7 +326,7 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
 [!] If Blank: Doesn't add keywords other than page name
 [!] Message: Separate multiple keyword with comma
 
-<Variable name="meta.icon" description="Favicon URL" type="string" default="" value="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgi00EeneVXgfW2X6fxQzOnZGB-xPNSmk8lX3gJuKjI1jJwzMn6WTL_ECXm2OIZQCwkVbtJKkYyIRQ2uiC4PfftNkRU7pn5_n3kwDdrJZjtFNJAkZpHB3nj4Xuc0ln9rjSVzIvan0n8e-0wcP9k8xxAFglpBnIBG60rgMjyLYiGsifx3152iSXNeJZqOipZ/s1600/obraa-favicon.png"/>
+<Variable name="meta.icon" description="Favicon URL" type="string" default="" value="https://blogger.googleusercontent.com/img/a/AVvXsEg-m1L7cwPqSkx-8iKwRBoxkbajxArYJVSdGv1SxT7iRyTi4LdeY0qF9vdqN8NLg2GRNnyufUChEbtniGGwkmxcqtjOHlK-RrkVxZRWpZrD3arU5Seq7TDe18MAz4RaWrDp3OTrdn9gMaiXE4rFpzqINPhqav9q4taALG5Rgk1MXHajZBvHju1VZFYstj0=s512"/>
 [!] Favicon URL
 [!] @type {String}
 [!] Recommended image ratio: 1:1
